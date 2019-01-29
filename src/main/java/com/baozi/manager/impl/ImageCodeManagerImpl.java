@@ -12,15 +12,17 @@ import javax.imageio.ImageIO;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.Base64Utils;
+import org.springframework.stereotype.Service;
 
 import com.baozi.manager.ImageCodeManager;
+import com.baozi.util.BASE64Util;
 import com.feilong.core.util.RandomUtil;
 
 /**
  * @author 包志晨 lovexy201211@gmail.com
  * @version 创建时间：2019年1月29日 下午2:52:10
  */
+@Service
 public class ImageCodeManagerImpl implements ImageCodeManager{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ImageCodeManagerImpl.class);
@@ -44,7 +46,7 @@ public class ImageCodeManagerImpl implements ImageCodeManager{
             LOGGER.error("write image error", e);
         }
         byte[] bytes = output.toByteArray();
-        return "data:image/jpeg;base64," + Base64Utils.encode(bytes);
+        return "data:image/jpeg;base64," + BASE64Util.encode(bytes);
     }
 
     /*
