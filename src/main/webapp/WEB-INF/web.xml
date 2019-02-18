@@ -51,4 +51,33 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	<!--**************************default servlet-mapping************************ -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+
+        <!-- *****************图片***************** -->
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.gif</url-pattern>
+
+        <url-pattern>*.ico</url-pattern>
+
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.xml</url-pattern>
+        <url-pattern>*.txt</url-pattern>
+
+        <url-pattern>*.swf</url-pattern>
+
+        <!-- Web开放字体格式（Web Open Font Format，简称WOFF -->
+        <url-pattern>*.woff</url-pattern>
+        <url-pattern>*.woff2</url-pattern>
+
+        <!-- TTF（TrueTypeFont）是一种 。TTF（TrueTypeFont）是Apple公司和Microsoft公司共同推出的字体文件格式，随着windows的流行，已经变成最常用的一种字体文件表示方式 -->
+        <url-pattern>*.ttf</url-pattern>
+        
+        <url-pattern>*.svg</url-pattern>
+    </servlet-mapping>
 </web-app>
