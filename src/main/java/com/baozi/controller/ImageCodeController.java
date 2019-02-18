@@ -17,6 +17,7 @@ import com.baozi.manager.ImageCodeManager;
 @Controller
 public class ImageCodeController{
 
+    @SuppressWarnings("unused")
     private static final Logger LOGGER = LoggerFactory.getLogger(ImageCodeController.class);
 
     @Autowired

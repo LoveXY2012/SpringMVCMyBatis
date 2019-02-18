@@ -28,10 +28,10 @@ public class ImageCodeManagerImpl implements ImageCodeManager{
     private static final Logger LOGGER = LoggerFactory.getLogger(ImageCodeManagerImpl.class);
 
     // 图片的宽度。
-    private int width = 120;
+    private int width = 1200;
 
     // 图片的高度。
-    private int height = 40;
+    private int height = 400;
 
     // 验证码干扰线数
     private int lineCount = 10;
@@ -46,7 +46,7 @@ public class ImageCodeManagerImpl implements ImageCodeManager{
             LOGGER.error("write image error", e);
         }
         byte[] bytes = output.toByteArray();
-        return "data:image/jpeg;base64," + BASE64Util.encode(bytes);
+        return "data:image/png;base64," + BASE64Util.encode(bytes);
     }
 
     /*
@@ -68,8 +68,8 @@ public class ImageCodeManagerImpl implements ImageCodeManager{
         int blue = 0;
         int codeCount = verCode.length();
         x = width / codeCount;//每个字符的宽度
-        fontHeight = height - 2;//字体的高度
-        codeY = height - 4;
+        fontHeight = height - 20;//字体的高度
+        codeY = height - 40;
 
         // 图像buffer
         BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -77,7 +77,7 @@ public class ImageCodeManagerImpl implements ImageCodeManager{
         // 生成随机数
         Random random = new Random();
         // 将图像填充为白色
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         g.fillRect(0, 0, width, height);
 
         //图片划线
