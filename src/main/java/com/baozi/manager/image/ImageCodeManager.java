@@ -1,4 +1,4 @@
-package com.baozi.manager;
+package com.baozi.manager.image;
 
 /**
 * @author 包志晨  lovexy201211@gmail.com

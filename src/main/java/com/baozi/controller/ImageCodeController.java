@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.baozi.manager.ImageCodeManager;
+import com.baozi.manager.image.ImageCodeManager;
 
 /**
  * @author 包志晨 lovexy201211@gmail.com

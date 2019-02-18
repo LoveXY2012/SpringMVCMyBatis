@@ -1,4 +1,4 @@
-package com.baozi.manager.impl;
+package com.baozi.manager.image.impl;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -14,7 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.baozi.manager.ImageCodeManager;
+import com.baozi.manager.image.ImageCodeManager;
 import com.baozi.util.BASE64Util;
 import com.feilong.core.util.RandomUtil;
 
