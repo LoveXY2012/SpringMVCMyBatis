@@ -22,6 +22,9 @@
 	<div class="center">
 		<img src="${imageCode}" />
 	</div>
+	<div class="center">
+		<img src="/imageCode/get/rese" />
+	</div>
 </body>
 
 </html>

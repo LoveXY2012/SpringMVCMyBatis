@@ -1,5 +1,7 @@
 package com.baozi.controller;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +27,13 @@ public class ImageCodeController{
 
     @RequestMapping(value = "/imageCode/get",method = RequestMethod.GET)
     public String getImageCode(Model model){
-        String imagCode = imageCodeManager.getImagCode();
+        String imagCode = imageCodeManager.getImageCode();
         model.addAttribute("imageCode", imagCode);
         return "imageCode";
+    }
+    
+    @RequestMapping(value = "/imageCode/get/rese",method = RequestMethod.GET)
+    public void getImageCodeByResponse(Model model,HttpServletResponse response){
+        imageCodeManager.writeImageCode2Response(response);
     }
 }
